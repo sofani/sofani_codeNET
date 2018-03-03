@@ -1,0 +1,182 @@
+﻿
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="index.html" class="pull-left visible-md visible-lg">
+                        <img id="logo-img" src="~/Images/restaurant-logo_large.png" />
+                    </a>
+
+                    <div class="navbar-brand">
+                        <a href="index.html"><h1>My Pizza Store </h1></a>
+                        @*<p>
+                                <img src="images/star-k-logo.png" alt="Kosher certification">
+                                <span>Kosher Certified</span>
+                            </p>*@
+                    </div>
+
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li id="navHomeButton" class="visible-xs active">
+                            <a href="index.html">
+                                <span class="glyphicon glyphicon-home"></span> Home
+                            </a>
+                        </li>
+                        <li id="navMenuButton">
+                            <a href="#" onclick="">
+                                <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-shopping-cart">$7.85M</span><br class="hidden-xs"> Orders
+                            </a>
+                        </li>
+                        <li id="phone" class="hidden-xs">
+                            <a href="tel:510-542-7312">
+                                <span>5105427312</span>
+                            </a>
+                            <div>* We Deliver</div>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Login", "LogIn", "Pizza", new { @class = "elements" }, null)
+                        </li>
+                        <li>
+                            @Html.ActionLink("SignUp", "SignUp", "Pizza", new { @class = "elements" }, null)
+                        </li>
+                    </ul><!-- #nav-list -->
+                </div><!-- .collapse .navbar-collapse -->
+            </div><!-- .container -->
+        </nav><!-- #header-nav -->
+    </header>
+
+    <div id="call-btn" class="visible-xs">
+        <a class="btn" href="tel:510-542-7312">
+            <span class="glyphicon glyphicon-earphone"></span>
+            510-542-7312
+        </a>
+    </div>
+    <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+    <section>
+        <div id="main-content" class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h4>Small Size Pizza: $5.00M</h4>
+                    <img class="image" src="~/Images/smallPiza.jpg" />
+
+                </div>
+                <div class="col-lg-3">
+                    <h4>Toppings:</h4>
+                    <select style="background-color: black;">
+                        <option value="Bacon">Bacon: .85M</option>
+                        <option value="Ham">Ham  $.85M</option>
+                        <option value="Pepporeni">Pepporeni  $.85M</option>
+                        <option value="Cheese">Cheese: $.85M</option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Crusts:</h4>
+                    <form>
+                        <input type="radio" name="handTossed" value="HandTossed" checked> HandTossed : $2:00<br>
+                        <input type="radio" name="thin" value="thin"> Thin: $2:00<br>
+                        <input type="radio" name="pan" value="Pepperoni"> Pan :$2:00
+                    </form>
+                </div>
+                <div class="col-lg-3">
+                    @Html.ActionLink("AddCart", "AddCart", "Pizza", new { @class = "elements" }, null)
+                </div>
+              </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h4>Meduim Size Pizza: $5.00M</h4>
+                        <img class="image" src="~/Images/smallPiza.jpg" />
+                    </div>
+                    <div class="col-lg-3">
+                        <h4>Toppings:</h4>
+                        <select style="background-color: black;">
+                            <option value="Bacon">Bacon: $2:00</option>
+                            <option value="Ham">Ham  $2:00</option>
+                            <option value="Pepporeni">Pepporeni  $2:00</option>
+                            <option value="Cheese">Cheese: $2:00</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4>Crusts:</h4>
+                        <form>
+                            <input type="radio" name="handTossed" value="HandTossed" > HandTossed : $2:00<br>
+                            <input type="radio" name="thin" value="thin" checked> Thin: $2:00<br>
+                            <input type="radio" name="pan" value="Pepperoni"> Pan :$2:00
+                        </form>
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.ActionLink("AddCart", "AddCart1", "Pizza", new { @class = "elements" }, null)
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h4>Large Size Pizza: $7:00</h4>
+                        <img class="image" src="~/Images/smallPiza.jpg" />
+                    </div>
+                    <div class="col-lg-3">
+                        <h4>Toppings:</h4>
+                        <select style="background-color: black;">
+                            <option value="Bacon">Bacon: $2:00</option>
+                            <option value="Ham">Ham  $2:00</option>
+                            <option value="Pepporeni">Pepporeni  $2:00</option>
+                            <option value="Cheese">Cheese: $2:00</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4>Crusts:</h4>
+                        <form>
+                            <input type="radio" name="handTossed" value="HandTossed" > HandTossed : $2:00<br>
+                            <input type="radio" name="thin" value="thin"> Thin: $2:00<br>
+                            <input type="radio" name="pan" value="Pepperoni" checked> Pan :$2:00
+                        </form>
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.ActionLink("AddCart", "AddCart2", "Pizza",  null)
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer class="panel-footer">
+        <div class="container">
+            <div class="row">
+                <section id="hours" class="col-sm-4">
+                    <span>Hours:</span><br>
+                    Sun-Thurs: 11:15am - 10:00pm<br>
+                    Fri: 11:15am - 2:30pm<br>
+                    Saturday Closed
+                    <hr class="visible-xs">
+                </section>
+                <section id="address" class="col-sm-4">
+                    <span>Address:</span><br>
+                    2500  Actovia street <br>
+                    Reston, VA 94607
+                    <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+                    <hr class="visible-xs">
+                </section>
+                <section id="testimonials" class="col-sm-4">
+                    <p>"The best Pizza Store I've been to! And that's saying a lot, since I've been to many!"</p>
+                    <p>"Amazing Pizza! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+                </section>
+            </div>
+            <div class="text-center">&copy; Copyright Sofani Mesfun 2017</div>
+        </div>
+    </footer>

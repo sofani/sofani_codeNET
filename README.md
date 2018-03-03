@@ -1,21 +1,16 @@
-#readme:;code
+# readme::code
+
 ## about
-the code to use while in training
-#licence#
+the code to use while in training.
 
-##Technologies
+## how to install
 
-*.NET CORE
+## technologies
+* .NET Core
+* VS Code
 
-*VS CODE
+1. .NET Core
+1. VS Code
 
-1. J2EE
-
-2. SPRINGFRAMEWORK
-
-
-# ***code*** is licenced under the [mit Licence]()
-
-
-#A README file contains information about other files in a directory or archive of computer software. A form of documentation, it is usually a simple plain text file called READ.ME, README.TXT, README.md (for a text file using markdown markup), README.1ST – or simply README.#
-
+## license
+**code** is licensed under the [MIT License]().

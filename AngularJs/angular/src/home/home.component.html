@@ -1,0 +1,27 @@
+
+<div style="text-align:center">
+    <h1> Welcome to {{ title }}!  </h1>   <!-- Handle bars -->
+  </div>
+
+<div class="row">
+        <div class="col">
+          <form>
+            <input type="text" class="txt" name="item" [(ngModel)]="goalText">
+            <span>{{goalText}}</span>
+            <input type="submit" class="btn" [value]="btnText" (click)="AddItem()">
+          </form>
+          
+        </div>
+  
+        <div class="col">
+            <!-- iNTERPOLATION -->
+          <p class="">your bucket List = ({{itemCount}})</p>
+        </div>
+
+        <div class="col">
+                <!-- iNTERPOLATION -->
+              <p *ngFor="let goal of goals"> 
+                  {{goal}}
+              </p>
+        </div>
+</div>
