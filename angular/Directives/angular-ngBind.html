@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>AngularJS Directives (ngBind)</title>
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	</head>
+	<body>
+	<h3>The below element will show/hide based on the ng-show directive and the ng-model directive</h3>
+	<label for="toggler">Check this value to toggle display of the paragraph</label>
+	<input type="checkbox"  name="toggler" ng-model="show" />
+	<p ng-bind="show">This is a first paragraph controlled for Angular. Its innerHTML will be changed to the value of show.</p>
+	<p>Default value: {{show===undefined}}</p>
+	
+	<p ng-show="show">This paragraph is controlled by Angular</p>
+	
+	</body>
+</html>

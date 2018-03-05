@@ -9,6 +9,6 @@
 	{{ 'last name' | uppercase }}
 	<hr/>
 	<h3>Array</h3>
-	<p>{{ arr | orderBy:number }}</p>
+	<p>{{ arr | orderBy:number | limitTo: 3 }}</p>
 	</body>
 </html>
