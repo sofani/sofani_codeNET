@@ -44,6 +44,8 @@ export class PapiComponent {
         )
       
     }
+
+    
 }
 export class Poke {
     name: string;

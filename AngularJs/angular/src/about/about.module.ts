@@ -2,8 +2,9 @@ import { NgModule } from "@angular/core";
 import { AboutComponent } from "./about.component";
 
 @NgModule({
-   declarations: [AboutComponent],
-   bootstrap:[]
+   declarations: [],
+   bootstrap:[],
+   exports:[]
 })
 export class AboutModule {
 

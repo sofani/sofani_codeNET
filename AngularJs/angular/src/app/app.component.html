@@ -1,4 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
+{{title}} {{name}} {{age}}
+<img [src]='imageSrc'>
+<!-- event Binding example -->
+<button (click)="hello()">Click</button>
+{{clicking}}
+
+<input #field (blur)=showoutput(field.value)>
+  {{field.value}}
+<!-- Two way binding -->
+<input [(ngModel)]="name" placeholder="name">
+<h3>The given name is : {{name}}</h3>
+
+<!-- Structural Directives -->
+{{show}}
+<ul *ngIf="show">
+      
+    <li *ngFor="let name of names; let i = index">{{i}} --- {{name}}</li>
+</ul>
 
 <div>
     <ul>
@@ -7,9 +25,7 @@
         <li><a routerLink="about">About</a> </li>
         <li><a routerLink="papi">Papi</a> </li>
     </ul>
-</div>
- 
-   
+</div>  
 <router-outlet></router-outlet>
 
 
