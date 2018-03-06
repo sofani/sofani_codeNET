@@ -6,6 +6,7 @@ import { AboutComponent } from '../about/about.component';
 
 import { PapiComponent } from '../papi/papi.component';
 import { AppComponent } from './app.component';
+
 const routes: Routes = [
   
   { path: '', component: AppComponent },
