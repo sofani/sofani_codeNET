@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="UserApp">
+<head>
+	<title>Angular Custom Services</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="userService-example-1.js"></script>
+</head>
+<body>
+	<div ng-controller="UserController">
+		<p>The user returned from the service is: </p>
+		<p>Name: <span ng-bind="user.name"></span></p>
+		<p>Age: <span ng-bind="user.age"></span></p>
+	</div>
+	<div ng-controller="SaveController">
+		<form ng-submit="saveUser()">
+			<label for="name">Name:</label>
+			<input type="text" name="name" ng-model="user.name" />
+			
+			<label for="age">Age:</label>
+			<input type="number" name="age" ng-model="user.age" />
+			
+			<input type="submit" value="Save"  />
+		</form>
+	</div>
+</body>
+</html>

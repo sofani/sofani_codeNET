@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="Logger">
+<head>
+	<title>Log Service</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	<script src="logger.js"></script>
+</head>
+<body>
+	<div ng-controller="LoggingController">
+		<form>
+			<label for="username">Username:</label>
+			<input type="text" name="username" ng-model="username" ng-blur="message(username)"/>
+		</form>
+	</div>
+</body>
+</html>

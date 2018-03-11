@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="ScopeInheritance">
+	<head>
+		<title>AngularJS: Child Scope Inheritance</title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="scope-inheritance.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default">
+				<a class="navbar-brand" >Scope Inheritance</a>
+			</nav>
+		</header>
+		
+		<!-- Content -->
+		<div ng-controller="InheritanceController" class="well-lg">
+			<ul>
+				<li ng-repeat="num in arr"> 
+					<ul>
+						<li ng-repeat="num2 in arr2"> Inherited Number: {{num}} and my number: {{num2}}
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div> <!-- /InheritanceController -->
+	</body>
+</html>
