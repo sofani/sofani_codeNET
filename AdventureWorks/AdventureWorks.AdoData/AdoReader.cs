@@ -1,42 +1,38 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+
 namespace AdventureWorks.AdoData
 {
     public class AdoReader
     {
-        private string ConnectionString = "data source=sofanisqlweek.database.windows.net; initial catalog=sofanisqlweek; user id=sofa; password=sami114173;";
+        private string _connectionString = "data source=sofanisqlweek.database.windows.net;initial catalog=sofanisqlweek;user id=sofa;password=sami114173";
         private List<Customer> customers = new List<Customer>();
+
         public List<Customer> GetCustomers()
         {
-            string query = "select firstname, lastname from SalesLT.Customer; ";
+            string query = "select FirstName, LastName from SalesLT.Customer";
             SqlCommand cmd = new SqlCommand(query);
             SqlDataReader dr;
-            using (SqlConnection con = new SqlConnection(ConnectionString))
+
+            using (SqlConnection con = new SqlConnection(_connectionString))
             {
                 con.Open();
                 cmd.Connection = con;
                 dr = cmd.ExecuteReader();
+
 
                 while (dr.Read())
                 {
                     var c = new Customer(dr[0].ToString(), dr[1].ToString());
                     customers.Add(c);
                     System.Console.WriteLine(c.Fname + " " + c.Lname);
-
                     Thread.Sleep(1500);
                 }
             }
-
             return customers;
         }
-
-
-
     }
 }

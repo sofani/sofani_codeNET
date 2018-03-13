@@ -1,10 +1,4 @@
-﻿
-using System;
-using AdventureWorks.AdoData;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdventureWorks.AdoData;
 
 namespace AdventureWorks.Console
 {
@@ -12,11 +6,11 @@ namespace AdventureWorks.Console
     {
         static void Main(string[] args)
         {
-            var ador = new AdoReader();
-            ador.GetCustomers();
+            //var ador = new AdoReader();
+            var adoa = new AdoAdapter();
 
-            //var adoa = new AdoAdapter();
-            //adoa.GetCustomers();
+            //ador.GetCustomers();
+            adoa.GetCustomers();
         }
     }
 }

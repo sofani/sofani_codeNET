@@ -1,17 +1,14 @@
-﻿using AdventureWorks.EfData;
+﻿using AdventureWorks.EFData;
 using System;
 
-namespace AdventureWorks.EfConsole
+namespace AdventureWorks.EFConsole
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var ef = new EfHelper();
-
-            //ef.GetCustomers();
+            var ef = new EFHelper();
             ef.GetCustomers2();
-            Console.ReadLine();
         }
     }
 }
