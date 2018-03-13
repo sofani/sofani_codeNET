@@ -8,9 +8,15 @@ using System.Linq;
 
 namespace AsycAwait
 {
-    public class Customer {
-        public string LastName{get; set;}
-        public string  FirstName {get; set;}
+    public  class  Customer {
+       public override string ToString() {
+           return "Base";
+       }
+        
     }
 
+   public class Derived : Customer
+    {
+    
+    }
 }

@@ -13,19 +13,27 @@ namespace AsycAwait
       
         static void Main(string[] args)
         {
-
+            Derived d = new Derived();
+            Customer c = d as Customer;
+            if (c != null) {
+                  Console.WriteLine(c.ToString());
+            }
            
-
+          
         // Provide the query string with a parameter placeholder.
-      
+            //  calculate(2.45f);
             
-             Console.WriteLine();
+          
              Console.ReadLine();
         
 
         }
-
-
+        public static void calculate(float amount) {
+            object amountRef  = amount;
+            int balance = (int) (float) amountRef;
+            Console.WriteLine(balance);
+        }
+        
 
    
         static void overFlowExce() {
