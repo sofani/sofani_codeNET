@@ -13,16 +13,17 @@ namespace AsycAwait
       
         static void Main(string[] args)
         {
-            Derived d = new Derived();
-            Customer c = d as Customer;
-            if (c != null) {
-                  Console.WriteLine(c.ToString());
-            }
+            // Derived d = new Derived();
+            // Customer c = d as Customer;
+            // if (c != null) {
+            //       Console.WriteLine(c.ToString());
+            // }
            
           
-        // Provide the query string with a parameter placeholder.
+             // Provide the query string with a parameter placeholder.
             //  calculate(2.45f);
-            
+           Customer  s  = new Customer();
+           s.sortedListMethod();
           
              Console.ReadLine();
         
