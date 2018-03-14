@@ -13,22 +13,39 @@ namespace AsycAwait
       
         static void Main(string[] args)
         {
+              Customer  s  = new Customer();
+              bool bValidInteger  = false;
+              int value  = 0;
+              do {
+                  Console.WriteLine("Enter an Integer");
+                  bValidInteger = GetValidInteger(ref value);
+
+              } while (!bValidInteger);
+               Console.WriteLine("You entered a valid Integer " + value);
             // Derived d = new Derived();
             // Customer c = d as Customer;
             // if (c != null) {
             //       Console.WriteLine(c.ToString());
             // }
-           
-          
              // Provide the query string with a parameter placeholder.
             //  calculate(2.45f);
-           Customer  s  = new Customer();
-           s.sortedListMethod();
+         
+              //s.sortedListMethod();
           
              Console.ReadLine();
         
 
         }
+        public static bool GetValidInteger(ref int val) {
+                    string sLine = Console.ReadLine();
+                    int number ;
+                    if ((!int.TryParse(sLine, out number))) {
+                        return false;
+                    } else {
+                        val = number;
+                        return true;
+                    }
+            }
         public static void calculate(float amount) {
             object amountRef  = amount;
             int balance = (int) (float) amountRef;
