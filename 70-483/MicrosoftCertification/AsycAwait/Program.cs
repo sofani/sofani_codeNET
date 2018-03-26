@@ -12,7 +12,11 @@ namespace AsycAwait
     {
       
         static void Main(string[] args)
-        {
+        {      
+            int x  = 10;
+            int y = 20;
+            Console.WriteLine(x);
+                      Console.WriteLine(y);
               Customer  s  = new Customer();
               bool bValidInteger  = false;
               int value  = 0;
@@ -35,6 +39,15 @@ namespace AsycAwait
              Console.ReadLine();
         
 
+        }
+
+        void Swap( ref int x, ref int y ) {
+                    x = x + y; 
+                    y = x - y;
+                    x = x - y; 
+                     Console.WriteLine(x);
+                      Console.WriteLine(y);
+                    
         }
         public static bool GetValidInteger(ref int val) {
                     string sLine = Console.ReadLine();
