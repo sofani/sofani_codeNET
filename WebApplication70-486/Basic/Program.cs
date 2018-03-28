@@ -8,14 +8,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace BasicMvc
+namespace Basic
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
-          
+           //Console.WriteLine("Hi Mr Branden");
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
