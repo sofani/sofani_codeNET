@@ -5,8 +5,7 @@ using System.Text;
 using Certif70483;
 namespace ConsoleCertif70483 {
     class Program {
-        static void Main(string[] args)
-{
+        static void Main(string[] args) {
 //1) TypeValueValidation tv = new TypeValueValidation();
     Video video = new Video() {Title = "Video 1"};
     var videoEncoder = new VideoEncoder(); //Publisher                               
