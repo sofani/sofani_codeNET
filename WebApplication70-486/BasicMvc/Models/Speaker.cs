@@ -15,6 +15,6 @@ namespace BasicMvc.Models
         public string Name { get; set; }
 
         public string EmailAddress { get; set; }
-        public virtual List<Session> Sessions { get; set; }
+       // public virtual List<Session> Sessions { get; set; }
     }
 }
