@@ -3,25 +3,19 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 using Certif70483;
-
-namespace ConsoleCertif70483
-{
-    class Program
-    {
+namespace ConsoleCertif70483 {
+    class Program {
         static void Main(string[] args)
-        {
-            //1) TypeValueValidation tv = new TypeValueValidation();
-            Video video = new Video() {Title = "Video 1"};
-            var videoEncoder = new VideoEncoder(); //Publisher
-            var mailservice = new MailService(); //Subscriber
-             var messageservice = new MessageService(); //Subscriber 
-            videoEncoder.VideoEncoded += mailservice.onVideoEncoded;
-            videoEncoder.VideoEncoded += messageservice.onVideoEncoded;
-            videoEncoder.Encode(video);
-
-            Console.WriteLine("Hello World1!");
-        }
-
+{
+//1) TypeValueValidation tv = new TypeValueValidation();
+    Video video = new Video() {Title = "Video 1"};
+    var videoEncoder = new VideoEncoder(); //Publisher                               
+    var mailservice = new MailService(); //Subscriber
+    var messageservice = new MessageService(); //Subscriber 
+    videoEncoder.VideoEncoded += mailservice.onVideoEncoded;
+    videoEncoder.VideoEncoded += messageservice.onVideoEncoded;
+    videoEncoder.Encode(video);
+}
         //Delegates and Events
         public class MailService {
             public void onVideoEncoded(object source, VideoEventArgs e) {
@@ -86,8 +80,5 @@ namespace ConsoleCertif70483
 
           
         }
-
-
-
     }
 }
